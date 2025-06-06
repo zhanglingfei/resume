@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steve Chou - Enterprise Architect & Data Governance Expert</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.5;
+            color: #333;
+            background-color: #ffffff;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            color: white;
+            margin-bottom: 30px;
+            border-radius: 10px;
+        }
+        
+        .header h1 {
+            font-size: 2.8em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .header .title {
+            font-size: 1.4em;
+            margin-bottom: 20px;
+            color: #e0e7ff;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            font-size: 1em;
+            flex-wrap: wrap;
+        }
+        
+        .contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .section {
+            margin-bottom: 35px;
+        }
+        
+        .section-title {
+            background-color: #dc2626;
+            color: white;
+            padding: 12px 20px;
+            font-size: 1.3em;
+            font-weight: 600;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .summary {
+            background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+            padding: 25px;
+            border-left: 5px solid #3b82f6;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+            line-height: 1.7;
+            border-radius: 8px;
+        }
+        
+        .core-strengths {
+            background-color: #f0f9ff;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #bae6fd;
+            margin-top: 20px;
+        }
+        
+        .core-strengths h4 {
+            color: #1e3a8a;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+        
+        .core-strengths ul {
+            list-style: none;
+        }
+        
+        .core-strengths li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+            line-height: 1.5;
+        }
+        
+        .core-strengths li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #3b82f6;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        .experience-item {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #e5e7eb;
+            border-radius: 10px;
+            background-color: #fafafa;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 10px;
+        }
+        
+        .job-title {
+            font-weight: 600;
+            color: #1e3a8a;
+            font-size: 1.2em;
+        }
+        
+        .company {
+            font-weight: 500;
+            color: #dc2626;
+            font-size: 1.1em;
+            margin-top: 5px;
+        }
+        
+        .duration {
+            color: #6b7280;
+            font-style: italic;
+            font-size: 1em;
+            font-weight: 500;
+        }
+        
+        .strategic-impact {
+            background-color: #fef3c7;
+            padding: 12px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            border-left: 4px solid #f59e0b;
+        }
+        
+        .strategic-impact strong {
+            color: #92400e;
+        }
+        
+        .responsibilities, .achievements {
+            margin-top: 15px;
+        }
+        
+        .responsibilities h5, .achievements h5 {
+            color: #1e3a8a;
+            margin-bottom: 10px;
+            font-size: 1em;
+            text-decoration: underline;
+        }
+        
+        .responsibilities ul, .achievements ul {
+            list-style: none;
+        }
+        
+        .responsibilities li, .achievements li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+            line-height: 1.5;
+        }
+        
+        .responsibilities li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #3b82f6;
+            font-weight: bold;
+        }
+        
+        .achievements li:before {
+            content: "★";
+            position: absolute;
+            left: 0;
+            color: #dc2626;
+            font-weight: bold;
+        }
+        
+        .tech-stack {
+            background-color: #f8fafc;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+            border: 1px solid #e2e8f0;
+        }
+        
+        .tech-stack strong {
+            color: #1e3a8a;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        
+        .skill-category {
+            background-color: #f8fafc;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .skill-category h4 {
+            color: #1e3a8a;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+            border-bottom: 2px solid #3b82f6;
+            padding-bottom: 8px;
+        }
+        
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .skill-tag {
+            background-color: #dbeafe;
+            color: #1e40af;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.9em;
+            border: 1px solid #93c5fd;
+            font-weight: 500;
+        }
+        
+        .education-item {
+            background-color: #f8fafc;
+            padding: 15px 20px;
+            margin-bottom: 15px;
+            border-left: 4px solid #dc2626;
+            border-radius: 6px;
+        }
+        
+        .degree {
+            font-weight: 600;
+            color: #1e3a8a;
+            font-size: 1.1em;
+        }
+        
+        .institution {
+            color: #6b7280;
+            font-style: italic;
+            margin-top: 5px;
+        }
+        
+        .period {
+            color: #9ca3af;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+        
+        .certifications {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        
+        .cert-item {
+            background-color: #fef2f2;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #fecaca;
+            text-align: center;
+            font-size: 0.95em;
+            color: #991b1b;
+            font-weight: 500;
+        }
+        
+        .publications {
+            background-color: #f0fdf4;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #bbf7d0;
+        }
+        
+        .publications h4 {
+            color: #15803d;
+            margin-bottom: 15px;
+        }
+        
+        .publication-item {
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: white;
+            border-radius: 5px;
+            border-left: 3px solid #22c55e;
+        }
+        
+        .publication-title {
+            font-weight: 600;
+            color: #166534;
+        }
+        
+        .citation-count {
+            color: #059669;
+            font-size: 0.9em;
+            font-weight: 500;
+        }
+        
+        .highlight {
+            background-color: #fef3c7;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+            color: #92400e;
+        }
+        
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+        
+        @media (max-width: 768px) {
+            .contact-info {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .job-header {
+                flex-direction: column;
+                gap: 5px;
+            }
+            
+            .header h1 {
+                font-size: 2.2em;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .two-column {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>Chou (Steve) Ryouhei</h1>
+            <div class="title">Enterprise Architect & Data Governance Expert</div>
+            <div class="contact-info">
+                <span>📧 chou.lingfei.ryohei@gmail.com</span>
+                <span>📍 Tokyo, Japan</span>
+                <span>🗓️ December 1980</span>
+                <span>💼 20+ Years Experience</span>
+            </div>
+        </div>
+
+        <!-- Executive Summary -->
+        <div class="section">
+            <div class="section-title">Executive Summary</div>
+            <div class="summary">
+                <strong>Mechanical Engineer turned Enterprise Architect and Data Governance expert</strong> with unique interdisciplinary background spanning advanced engineering simulation and enterprise data systems. Mechanical Engineering graduate from <span class="highlight">Aalborg University (Denmark)</span> and <span class="highlight">Hamburg Technical University (Germany)</span> with specialized expertise in Computer-Aided Engineering (CAE) and Finite Element Method (FEM) simulation for analyzing mechanical properties of ceramic materials under stress conditions.
+                <br><br>
+                Early career as <strong>Computational Mechanical Engineer in French Nuclear Program (EDF)</strong> developing critical safety algorithms and simulation models for nuclear materials evaluation. Leveraging 15+ years of experience bridging rigorous engineering methodology with cutting-edge data architecture, bringing a distinctive analytical approach to enterprise technology challenges.
+                <br><br>
+                <strong>Engineering-to-Enterprise Evolution:</strong> My transition from computational mechanics to enterprise architecture brings mathematical rigor and simulation-based thinking to business technology challenges. This background enables me to approach data architecture with the same precision and validation methodologies used in nuclear safety systems, ensuring both innovation and operational reliability.
+                <br><br>
+                Specialized in designing scalable data architectures that align with regulatory requirements while driving innovation through <span class="highlight">Google Cloud Customer Technical Engineer</span> experience driving <strong>$500k+ in revenue</strong> through technical sales excellence. Proven track record of establishing governance frameworks that enhance data quality while supporting business agility.
+            </div>
+            
+            <div class="core-strengths">
+                <h4>Core Strengths:</h4>
+                <ul>
+                    <li><strong>Architecting enterprise-scale data systems</strong> that align with business strategy and regulatory requirements</li>
+                    <li><strong>Establishing robust data governance frameworks</strong> that balance security with accessibility</li>
+                    <li><strong>Product sales engineering excellence:</strong> Demonstrated success in technical sales through 2 years at Google Cloud as Customer Technical Engineer, consistently achieving >98%+ customer satisfaction targets by translating technical capabilities into measurable business value and ROI</li>
+                    <li><strong>Executive demonstration and training leadership:</strong> Delivered 20+ technical presentations and product demonstrations to C-level executives, successfully closing $500k+ in cloud adoption deals through compelling technical storytelling and hands-on proof-of-concept development</li>
+                    <li><strong>Leading cross-functional global teams</strong> through complex digital transformation initiatives</li>
+                    <li><strong>Optimizing data pipelines and processes</strong> for cost efficiency, performance, and scalability while driving customer acquisition and retention through technical excellence</li>
+                    <li><strong>Translating complex technical concepts</strong> for executive stakeholders and driving organizational change through persuasive technical communication and customer-focused solution design</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Professional Experience -->
+        <div class="section">
+            <div class="section-title">Professional Experience</div>
+            
+            <!-- Current Role -->
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Senior Consultant</div>
+                        <div class="company">Terabox Inc. Japan</div>
+                    </div>
+                    <div class="duration">March 2022 – Present</div>
+                </div>
+                <div class="strategic-impact">
+                    <strong>Strategic Impact:</strong> Led enterprise-wide data governance initiatives that directly contributed to 30% reduction in compliance risks while enabling faster data-driven decision making. Architected cloud solutions that reduced operational costs by 25% while improving system performance.
+                </div>
+                <div class="responsibilities">
+                    <h5>Responsibilities:</h5>
+                    <ul>
+                        <li><strong>Enterprise Architecture:</strong> Designed and implemented organization-wide reference architectures for cloud adoption, establishing standards that accelerated development cycles by 40%. Created architectural decision frameworks that aligned technology choices with business priorities and regulatory requirements.</li>
+                        <li><strong>Data Governance & Compliance:</strong> Established comprehensive data governance program encompassing policies, standards, and procedures across the entire data lifecycle. Implemented Azure Purview for data cataloging and lineage tracking, increasing data discovery efficiency by 60%. Developed a data ethics framework guiding AI implementation across the enterprise.</li>
+                        <li><strong>Cloud Architecture & Data Engineering:</strong> Architected event-driven, microservices-based solutions on Azure, leveraging Kubernetes, Synapse Analytics, and Data Factory. Implemented DataOps practices that reduced integration issues by 45% and accelerated release cycles. Optimized cloud resource utilization resulting in 30% cost reduction without performance compromise.</li>
+                        <li><strong>Strategic Leadership:</strong> Led architecture review board ensuring solution consistency and standards compliance. Developed and delivered executive-level presentations connecting architectural decisions to business outcomes. Created value stream maps for data processes, identifying optimization opportunities worth $1M annually.</li>
+                        <li><strong>Change Management:</strong> Implemented Prosci ADKAR model for major transformation projects, achieving 90% stakeholder adoption. Created data literacy programs raising organizational data competency scores by 40%.</li>
+                    </ul>
+                </div>
+                <div class="achievements">
+                    <h5>Key Achievements:</h5>
+                    <ul>
+                        <li><strong>Portfolio Management Excellence:</strong> Established portfolio management framework aligning 30+ data initiatives with strategic priorities, resulting in 40% improvement in resource allocation efficiency.</li>
+                        <li><strong>Architectural Innovation:</strong> Pioneered hybrid multi-cloud reference architecture enabling seamless workload portability between Azure and on-premises environments, reducing vendor lock-in risks while maintaining consistent governance.</li>
+                        <li><strong>Data Quality Transformation:</strong> Implemented automated data quality monitoring framework reducing data errors by 75% and improving business decision confidence scores by 35%.</li>
+                        <li><strong>Business Impact:</strong> Developed business cases for major technology investments with projected 5-year ROI, securing executive buy-in and funding for strategic initiatives.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Google Cloud Role -->
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Senior Customer Technical Engineer & Cloud Architect</div>
+                        <div class="company">Google Cloud Japan</div>
+                    </div>
+                    <div class="duration">April 2020 – March 2022</div>
+                </div>
+                <div class="strategic-impact">
+                    <strong>Strategic Impact:</strong> Drove $500k+ in GCP revenue through technical sales engineering, delivering compelling product demonstrations and architectural guidance that enabled successful migration of mission-critical workloads for enterprise clients, reducing their operational costs by 35% while achieving 120%+ customer adoption targets.
+                </div>
+                <div class="responsibilities">
+                    <h5>Responsibilities:</h5>
+                    <ul>
+                        <li><strong>Technical Sales & Product Evangelism:</strong> Led pre-sales technical engagements with enterprise clients, conducting 20+ executive-level product demonstrations and proof-of-concept development. Collaborated closely with sales teams to translate customer business requirements into compelling GCP solution architectures, consistently achieving 120%+ quarterly adoption targets.</li>
+                        <li><strong>Customer-Focused Solution Design:</strong> Designed reference architectures for enterprise data platforms on GCP, emphasizing ROI-driven value propositions alongside technical excellence. Developed customer-specific migration roadmaps that directly addressed business pain points while showcasing GCP's competitive advantages.</li>
+                        <li><strong>Executive Training & Enablement:</strong> Delivered comprehensive technical training programs to C-level executives and technical teams across 50+ enterprise accounts. Created and presented business case frameworks demonstrating measurable value from cloud adoption, resulting in accelerated decision-making cycles and increased customer commitment.</li>
+                        <li><strong>Data Engineering Excellence:</strong> Optimized BigQuery-based data warehouses and Dataflow pipelines, improving query performance by up to 70% while reducing costs. Showcased these optimizations through live demonstrations, converting technical wins into expanded customer engagements and upselling opportunities.</li>
+                        <li><strong>Product Feedback & Innovation:</strong> Captured customer requirements and technical feedback, working with Google product teams to influence GCP roadmap development. Created customer success stories and case studies that became standard sales collateral across APAC region.</li>
+                        <li><strong>Community Building:</strong> Established GCP architecture community of practice connecting 200+ architects across APAC region, facilitating knowledge sharing and generating qualified leads through thought leadership and technical content creation.</li>
+                    </ul>
+                </div>
+                <div class="achievements">
+                    <h5>Key Achievements:</h5>
+                    <ul>
+                        <li><strong>Sales Engineering Excellence:</strong> Consistently exceeded quarterly targets by 120%+, driving $500k+ in GCP revenue through technical sales presentations, executive demonstrations, and strategic customer engagement that directly converted technical discussions into signed contracts.</li>
+                        <li><strong>Customer Success & Retention:</strong> Achieved 98% customer satisfaction rating and 95% customer retention rate through exceptional technical support combined with proactive business value communication, resulting in 40% average account expansion year-over-year.</li>
+                        <li><strong>Migration Success:</strong> Architected successful migration strategy for financial services client moving 400TB data warehouse to BigQuery, reducing TCO by 40% while improving query performance. Presented business case and technical roadmap to board of directors, securing $15M multi-year commitment.</li>
+                        <li><strong>Thought Leadership:</strong> Delivered 50+ presentations at internal meetings and customer events, establishing Google Cloud Japan as technical leader in enterprise data architecture. Generated 30+ qualified sales leads through technical content creation and community engagement activities.</li>
+                        <li><strong>Product Demonstration Excellence:</strong> Developed and delivered standardized demo frameworks and proof-of-concept templates adopted across APAC sales teams, reducing customer evaluation cycles by 45% and improving technical win rates by 60%.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Consulting Projects -->
+            <div style="background-color: #f0f9ff; padding: 20px; border-radius: 10px; margin-bottom: 30px;">
+                <h3 style="color: #1e3a8a; margin-bottom: 20px; text-align: center;">CONSULTING PROJECTS</h3>
+                
+                <!-- AI Solutions Architect -->
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Senior AI Solutions Architect</div>
+                            <div class="company">Digital Talent & Project Matching Platform</div>
+                        </div>
+                        <div class="duration">2024 – Present</div>
+                    </div>
+                    <div class="strategic-impact">
+                        <strong>Strategic Impact:</strong> Designed and implemented an intelligent talent-project matching system leveraging Claude Sonnet 4 LLM, automating recruitment processes and achieving 95% accuracy in candidate-project alignment while reducing manual screening time by 85%.
+                    </div>
+                    <div class="responsibilities">
+                        <h5>Responsibilities:</h5>
+                        <ul>
+                            <li><strong>AI-Powered Matching Engine:</strong> Architected comprehensive talent-project matching system using Claude Sonnet 4 as the core LLM, implementing sophisticated prompt engineering techniques for multi-dimensional candidate evaluation. Developed automated document parsing workflows extracting structured data from emails and paper-based documents with 98% accuracy.</li>
+                            <li><strong>Google App Engine Architecture:</strong> Designed scalable backend infrastructure on Google App Engine utilizing microservices architecture with Cloud Functions for document processing, Cloud SQL for structured data storage, and Cloud Storage for document management. Implemented robust API gateway for secure data access and real-time synchronization.</li>
+                            <li><strong>Advanced NLP Pipeline:</strong> Built comprehensive natural language processing pipeline for resume and project requirement analysis, utilizing entity extraction, sentiment analysis, and semantic similarity algorithms. Implemented intelligent data validation and enrichment processes ensuring data quality and completeness.</li>
+                            <li><strong>Hexagonal Competency Assessment:</strong> Developed innovative six-dimensional evaluation framework assessing technical skills, domain expertise, communication abilities, leadership potential, cultural fit, and project complexity alignment. Created dynamic scoring algorithms providing nuanced candidate profiling beyond traditional keyword matching.</li>
+                            <li><strong>Intelligent Recommendation System:</strong> Engineered machine learning recommendation engine providing top-3 project matches per candidate based on weighted scoring across multiple criteria including skills alignment, experience relevance, availability, and growth potential. Implemented feedback loops for continuous model improvement.</li>
+                        </ul>
+                    </div>
+                    <div class="achievements">
+                        <h5>Key Achievements:</h5>
+                        <ul>
+                            <li><strong>Automation Excellence:</strong> Achieved 85% reduction in manual resume screening time while maintaining 95% accuracy in candidate-project matching, processing 500+ resumes weekly with automated extraction and analysis.</li>
+                            <li><strong>LLM Integration Success:</strong> Successfully implemented Claude Sonnet 4 integration with custom prompt engineering, achieving 98% accuracy in document parsing and 92% precision in competency assessment across diverse candidate profiles.</li>
+                            <li><strong>Business Impact:</strong> Reduced time-to-match from 2 weeks to 2 hours for qualified candidates, improving client satisfaction scores by 40% and increasing successful project placements by 60%.</li>
+                            <li><strong>Scalability Achievement:</strong> Designed system handling 10,000+ candidate profiles and 1,000+ active projects simultaneously, with real-time processing capabilities and sub-second response times for matching queries.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Streaming Solutions Architect -->
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Senior Streaming Solutions Architect</div>
+                            <div class="company">Rakuten Mobile Telemedicine Platform</div>
+                        </div>
+                        <div class="duration">2024 – Present</div>
+                    </div>
+                    <div class="strategic-impact">
+                        <strong>Strategic Impact:</strong> Architected high-performance streaming infrastructure for remote medical consultations, enabling real-time 8K video distribution across Japan's healthcare network and improving rural medical access by 300%.
+                    </div>
+                    <div class="responsibilities">
+                        <h5>Responsibilities:</h5>
+                        <ul>
+                            <li><strong>GPU-Accelerated Video Processing:</strong> Designed and implemented streaming server infrastructure utilizing Nvidia RTX 50 series high-performance GPUs for real-time processing of 8-channel 8K video streams from central hospitals. Optimized video encoding/decoding pipelines achieving 99.9% uptime and sub-50ms latency for critical medical consultations.</li>
+                            <li><strong>Enterprise Network Integration:</strong> Architected streaming distribution system leveraging Rakuten's internal 10Gbps high-speed network infrastructure, implementing intelligent load balancing and failover mechanisms. Designed role-based video distribution ensuring appropriate access levels for different medical personnel categories.</li>
+                            <li><strong>Real-Time Video Analytics:</strong> Implemented advanced computer vision algorithms for medical image enhancement, automatic region-of-interest detection, and real-time quality assessment. Integrated machine learning models for automated anomaly detection in medical imaging streams.</li>
+                            <li><strong>Scalable Streaming Architecture:</strong> Built horizontally scalable streaming infrastructure supporting concurrent multi-point video conferences with up to 50 participants per session. Implemented adaptive bitrate streaming and dynamic quality adjustment based on network conditions and device capabilities.</li>
+                            <li><strong>Healthcare Compliance Framework:</strong> Designed comprehensive security and privacy framework ensuring HIPAA compliance and Japanese medical data protection standards. Implemented end-to-end encryption, secure authentication, and audit logging for all medical video sessions.</li>
+                        </ul>
+                    </div>
+                    <div class="achievements">
+                        <h5>Key Achievements:</h5>
+                        <ul>
+                            <li><strong>Technical Excellence:</strong> Successfully delivered 8K video streaming solution processing 8 concurrent streams with sub-50ms latency, enabling real-time surgical consultations and emergency medical support across Japan's remote regions.</li>
+                            <li><strong>Infrastructure Performance:</strong> Optimized GPU utilization achieving 95% efficiency on RTX 50 series GPU hardware while maintaining thermal stability and extending hardware lifespan through intelligent workload distribution.</li>
+                            <li><strong>Healthcare Impact:</strong> Enabled 300% increase in rural medical access, facilitating 2,000+ remote consultations monthly and reducing patient travel requirements by 70% for specialist medical care.</li>
+                            <li><strong>Network Optimization:</strong> Leveraged Rakuten's 10Gbps network infrastructure achieving 99.99% stream reliability and implementing intelligent bandwidth management reducing network congestion by 45% during peak usage periods.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- FinOps Data Architect -->
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Senior FinOps Data Architect</div>
+                            <div class="company">Enterprise Cloud Cost Intelligence Platform</div>
+                        </div>
+                        <div class="duration">2024 – Present</div>
+                    </div>
+                    <div class="strategic-impact">
+                        <strong>Strategic Impact:</strong> Developed comprehensive cloud cost management and optimization platform enabling enterprise-wide visibility into multi-cloud spending patterns, resulting in 35% reduction in overall cloud costs and $8.5M annual savings across business units.
+                    </div>
+                    <div class="responsibilities">
+                        <h5>Responsibilities:</h5>
+                        <ul>
+                            <li><strong>Modern Data Stack Architecture:</strong> Architected end-to-end FinOps data pipeline using dbt Cloud as the primary ETL orchestration platform, implementing sophisticated data transformation workflows for cloud billing data normalization. Designed scalable data ingestion from AWS S3 into Snowflake data warehouse, handling 500GB+ daily billing data with sub-hour latency.</li>
+                            <li><strong>FOCUS Standard Implementation:</strong> Implemented comprehensive FinOps Open Cost and Usage Specification (FOCUS) standard for cloud cost data normalization, ensuring consistent cost attribution across AWS, Azure, and GCP environments. Developed automated data quality checks and validation rules maintaining 99.8% data accuracy across all cost dimensions.</li>
+                            <li><strong>Advanced Analytics Infrastructure:</strong> Built high-performance analytical foundation on Snowflake utilizing columnar storage optimization, automatic clustering, and result caching. Implemented complex cost allocation algorithms supporting showback/chargeback models for 50+ business units with granular resource tagging and department attribution.</li>
+                            <li><strong>Intelligent Cost Analytics:</strong> Developed sophisticated dbt models for cost trend analysis, anomaly detection, and optimization recommendations. Implemented machine learning algorithms for predictive cost forecasting and automated rightsizing recommendations, identifying potential savings opportunities across compute, storage, and network resources.</li>
+                            <li><strong>Executive Dashboard Development:</strong> Created comprehensive Power BI dashboard suite providing real-time visibility into cloud spending patterns, budget tracking, and optimization opportunities. Designed role-based views for executives, finance teams, and engineering managers with drill-down capabilities from high-level summaries to granular resource-level details.</li>
+                        </ul>
+                    </div>
+                    <div class="achievements">
+                        <h5>Key Achievements:</h5>
+                        <ul>
+                            <li><strong>Cost Optimization Impact:</strong> Achieved 35% overall cloud cost reduction through data-driven optimization recommendations, generating $8.5M annual savings while maintaining service quality and performance standards across all business units.</li>
+                            <li><strong>Data Pipeline Excellence:</strong> Successfully processed 500GB+ daily billing data with 99.9% pipeline reliability, implementing automated error handling and recovery mechanisms ensuring continuous cost visibility for business decision-making.</li>
+                            <li><strong>FOCUS Compliance Leadership:</strong> Successfully implemented industry-standard FOCUS specification enabling consistent cost reporting across multi-cloud environments, improving cost allocation accuracy by 85% and enabling precise showback/chargeback mechanisms.</li>
+                            <li><strong>Business Intelligence Value:</strong> Delivered comprehensive Power BI analytics platform serving 200+ stakeholders across finance, engineering, and executive teams, reducing manual cost reporting efforts by 90% while improving decision-making speed by 60%.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Volvo/UD Trucks -->
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Senior Data Architecture Consultant</div>
+                            <div class="company">Volvo/UD Trucks Japan</div>
+                        </div>
+                        <div class="duration">March 2022 – April 2023</div>
+                    </div>
+                    <div class="strategic-impact">
+                        <strong>Strategic Impact:</strong> Transformed telematics data capabilities through modern data lake architecture, enabling real-time analytics that improved fleet efficiency by 22% and reduced maintenance costs by 18%.
+                    </div>
+                    <div class="responsibilities">
+                        <h5>Responsibilities:</h5>
+                        <ul>
+                            <li><strong>Data Lake Architecture:</strong> Designed comprehensive data lake reference architecture on AWS incorporating bronze, silver, and gold data zones with clear transformation logic. Implemented data mesh concepts enabling domain-oriented ownership while maintaining governance.</li>
+                            <li><strong>Streaming Analytics:</strong> Architected real-time processing pipeline using Kafka, Kinesis, and Spark Streaming for vehicle telematics data, enabling predictive maintenance capabilities that reduced vehicle downtime by 32%.</li>
+                            <li><strong>Cost Governance:</strong> Implemented FinOps practices for AWS environment, establishing monitoring and optimization processes that reduced cloud spend by 28% while improving performance.</li>
+                            <li><strong>Data Catalog Implementation:</strong> Deployed AWS Glue Data Catalog with custom metadata enrichment, improving data discovery time by 65% and enabling self-service analytics.</li>
+                            <li><strong>DevOps Integration:</strong> Established GitOps workflows for infrastructure and pipeline code, reducing deployment errors by 75% and enabling rapid iteration.</li>
+                        </ul>
+                    </div>
+                    <div class="achievements">
+                        <h5>Key Achievements:</h5>
+                        <ul>
+                            <li><strong>Business Value Delivery:</strong> Data lake solution enabled predictive maintenance algorithms reducing unplanned downtime by 32% and maintenance costs by $3.5M annually.</li>
+                            <li><strong>Performance Optimization:</strong> Re-architected data pipelines achieving 8x performance improvement and 65% reduction in processing costs.</li>
+                            <li><strong>Data Democratization:</strong> Implemented self-service analytics platform increasing business user data utilization by 240% while maintaining governance controls.</li>
+                            <li><strong>Reference Architecture:</strong> Created data architecture patterns adopted company-wide as standard, accelerating future project delivery by 40%.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Core Competencies -->
+        <div class="section">
+            <div class="section-title">Core Competencies</div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>Enterprise Architecture & Engineering</h4>
+                    <div class="skill-list">
+                        <span class="skill-tag">TOGAF 9 Certified</span>
+                        <span class="skill-tag">CAE/FEM Simulation</span>
+                        <span class="skill-tag">Nuclear Safety Standards</span>
+                        <span class="skill-tag">Reference Architecture</span>
+                        <span class="skill-tag">Business-IT Alignment</span>
+                        <span class="skill-tag">Cloud Migration Planning</span>
+                        <span class="skill-tag">Event-Driven Architecture</span>
+                        <span class="skill-tag">Architecture Reviews</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h4>Data Engineering & Analytics</h4>
+                    <div class="skill-list">
+                        <span class="skill-tag">Data Mesh Implementation</span>
+                        <span class="skill-tag">Real-Time Processing</span>
+                        <span class="skill-tag">ETL/ELT Optimization</span>
+                        <span class="skill-tag">Multi-Cloud Integration</span>
+                        <span class="skill-tag">Data Lake Architecture</span>
+                        <span class="skill-tag">Streaming Analytics</span>
+                        <span class="skill-tag">Cost Optimization</span>
+                        <span class="skill-tag">ML Pipeline Automation</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h4>Computational & Materials Science</h4>
+                    <div class="skill-list">
+                        <span class="skill-tag">Finite Element Analysis</span>
+                        <span class="skill-tag">Materials Physics</span>
+                        <span class="skill-tag">Ceramic Materials</span>
+                        <span class="skill-tag">Nuclear Materials</span>
+                        <span class="skill-tag">X-ray Tomography</span>
+                        <span class="skill-tag">Thermal Analysis</span>
+                        <span class="skill-tag">Mathematical Modeling</span>
+                        <span class="skill-tag">Phase Field Modeling</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h4>Sales Engineering & Leadership</h4>
+                    <div class="skill-list">
+                        <span class="skill-tag">Technical Sales</span>
+                        <span class="skill-tag">Executive Presentations</span>
+                        <span class="skill-tag">Business Value Articulation</span>
+                        <span class="skill-tag">Customer Requirements</span>
+                        <span class="skill-tag">Cross-Cultural Leadership</span>
+                        <span class="skill-tag">Change Management</span>
+                        <span class="skill-tag">Portfolio Management</span>
+                        <span class="skill-tag">Resource Allocation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Technical Skills -->
+        <div class="section">
+            <div class="section-title">Technical Skills</div>
+            <div class="two-column">
+                <div>
+                    <div class="skill-category">
+                        <h4>Cloud Platforms</h4>
+                        <div class="skill-list">
+                            <span class="skill-tag">Azure (AKS, Synapse, Data Factory)</span>
+                            <span class="skill-tag">GCP (BigQuery, Dataflow)</span>
+                            <span class="skill-tag">AWS (S3, Glue, Athena)</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Programming & Development</h4>
+                        <div class="skill-list">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">Scala</span>
+                            <span class="skill-tag">SQL</span>
+                            <span class="skill-tag">Terraform</span>
+                            <span class="skill-tag">TypeScript</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Big Data & Streaming</h4>
+                        <div class="skill-list">
+                            <span class="skill-tag">Apache Spark</span>
+                            <span class="skill-tag">Kafka</span>
+                            <span class="skill-tag">Hadoop</span>
+                            <span class="skill-tag">dbt Cloud</span>
+                            <span class="skill-tag">Snowflake</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="skill-category">
+                        <h4>BI & Analytics</h4>
+                        <div class="skill-list">
+                            <span class="skill-tag">Power BI</span>
+                            <span class="skill-tag">Tableau</span>
+                            <span class="skill-tag">ECharts</span>
+                            <span class="skill-tag">D3.js</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>MLOps & AI</h4>
+                        <div class="skill-list">
+                            <span class="skill-tag">MLflow</span>
+                            <span class="skill-tag">Kubeflow</span>
+                            <span class="skill-tag">Vertex AI Pipelines</span>
+                            <span class="skill-tag">Claude Sonnet 4</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Containers & Orchestration</h4>
+                        <div class="skill-list">
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">Kubernetes</span>
+                            <span class="skill-tag">Helm</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Certifications -->
+        <div class="section">
+            <div class="section-title">Key Certifications</div>
+            <div class="certifications">
+                <div class="cert-item">TOGAF 9 Enterprise Architect (2025)</div>
+                <div class="cert-item">Azure Solutions Architect Expert (2024)</div>
+                <div class="cert-item">Azure Data Engineer Associate (2024)</div>
+                <div class="cert-item">Azure Data Scientist Associate (2024)</div>
+                <div class="cert-item">Azure AI Engineer Associate (2024)</div>
+                <div class="cert-item">GCP Professional Cloud Architect (2020)</div>
+                <div class="cert-item">GCP Professional Data Engineer (2020)</div>
+                <div class="cert-item">GCP Professional Machine Learning Engineer (2021)</div>
+            </div>
+        </div>
+
+        <!-- Earlier Career Highlights -->
+        <div class="section">
+            <div class="section-title">Earlier Career Highlights</div>
+            
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Senior Data Engineering Consultant</div>
+                        <div class="company">SEIRYO JAPAN</div>
+                    </div>
+                    <div class="duration">2017-2020</div>
+                </div>
+                <div class="responsibilities">
+                    <ul>
+                        <li>Led major data engineering initiatives for financial services and automotive clients, implementing high-throughput ETL pipelines processing 50TB+ weekly data and building real-time processing systems.</li>
+                        <li><strong>Nomura Securities Trading Platform (2019):</strong> Led development of high-frequency trading platform processing 1M+ transactions daily. Engineered performance-critical Oracle stored procedures reducing transaction latency by 78%.</li>
+                        <li><strong>Nissan Global IT Center Vehicle Data Platform (2018):</strong> Architected big data processing system for vehicle telemetry data across global operations. Developed Scala-based streaming computation engine using Apache Spark Streaming and Kafka for real-time analysis of 10TB+ daily sensor data.</li>
+                    </ul>
+                </div>
+                <div class="tech-stack">
+                    <strong>Tech Stack:</strong> Vue 3.5, TypeScript 5, Element Plus, ECharts, Spring Boot 3, Apache Spark, Kafka, Oracle, MongoDB, Redis
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Senior Java Engineer</div>
+                        <div class="company">China State-Grid Power</div>
+                    </div>
+                    <div class="duration">2016-2017</div>
+                </div>
+                <div class="responsibilities">
+                    <ul>
+                        <li>Architected comprehensive data warehouse management system for one of the world's largest utility companies, enabling efficient data storage, retrieval, and analysis.</li>
+                        <li>Developed interactive BI web portal with advanced visualizations using Vue and ECharts for energy operations, delivering actionable insights to stakeholders.</li>
+                        <li>Created an energy load forecasting platform utilizing Spring Boot, MyBatis-Plus, and MySQL 8 for data persistence, with predictive analytics to optimize distribution planning.</li>
+                    </ul>
+                </div>
+                <div class="tech-stack">
+                    <strong>Tech Stack:</strong> Vue, ECharts, Element Plus, Spring Boot, MyBatis-Plus, JWT, Spring Security, MySQL 8, Redis, Druid
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Computational Mechanical Engineer</div>
+                        <div class="company">EDF (Électricité de France), Paris</div>
+                    </div>
+                    <div class="duration">2010-2012</div>
+                </div>
+                <div class="strategic-impact">
+                    <strong>Strategic Impact:</strong> Led critical computational engineering initiatives for French Nuclear Program, developing advanced algorithms and simulation models for nuclear materials safety evaluation. This foundational experience in safety-critical systems directly shapes my approach to enterprise architecture, emphasizing reliability, validation, and risk assessment.
+                </div>
+                <div class="responsibilities">
+                    <ul>
+                        <li>Specialized in FEM-based stress analysis and mechanical property prediction for reactor components under extreme conditions.</li>
+                        <li>Utilized Java and specialized computational libraries for nuclear safety simulation development, implementing sophisticated mathematical models ensuring reactor safety compliance.</li>
+                        <li>Created comprehensive visualization dashboards with Vue and D3.js for complex nuclear engineering data representation, enabling engineers to analyze stress patterns and material behavior.</li>
+                        <li>Applied rigorous validation methodologies from nuclear safety standards, establishing computational frameworks that influenced subsequent reactor design protocols.</li>
+                    </ul>
+                </div>
+                <div class="tech-stack">
+                    <strong>Tech Stack:</strong> Java, Spring, Vue, D3.js, MySQL, Advanced Mathematical Libraries
+                </div>
+            </div>
+        </div>
+
+        <!-- Education -->
+        <div class="section">
+            <div class="section-title">Education</div>
+            <div class="education-item">
+                <div class="degree">Master's Degree in Physics & Mechanical Engineering</div>
+                <div class="institution">Aalborg University Denmark & Technical University of Hamburg Germany</div>
+                <div class="period">2008.09 – 2010.06</div>
+            </div>
+            <div class="education-item">
+                <div class="degree">Doctoral Study in Condensed Matter and Materials Physics</div>
+                <div class="institution">The University of Salford, UK</div>
+                <div class="period">2004.09 – 2007.12</div>
+            </div>
+            <div class="education-item">
+                <div class="degree">Bachelor's Degree in Theoretical and Mathematical Physics</div>
+                <div class="institution">Lanzhou University, China</div>
+                <div class="period">1998.09 – 2002.07</div>
+            </div>
+        </div>
+
+        <!-- Scientific Publications -->
+        <div class="section">
+            <div class="section-title">Scientific Publications</div>
+            <div class="publications">
+                <div class="publication-item">
+                    <div class="publication-title">"Stock market trend prediction using high-order information of time series"</div>
+                    <div>IEEE Access (2019) • <span class="citation-count">Citations: 157</span></div>
+                </div>
+                <div class="publication-item">
+                    <div class="publication-title">"MWNT reinforced polyurethane foam: Processing, characterization and modelling of mechanical properties"</div>
+                    <div>Composites Science and Technology (2011) • <span class="citation-count">Citations: 98</span></div>
+                </div>
+                <div class="publication-item">
+                    <div class="publication-title">"Modeling the mechanical properties of optimally processed cordierite–mullite–alumina ceramic foams by X-ray computed tomography and finite element analysis"</div>
+                    <div>Acta Materialia (2012) • <span class="citation-count">Citations: 52</span></div>
+                </div>
+                <div class="publication-item">
+                    <div class="publication-title">"Mesoscale modeling of coherent zirconium hydride precipitation under an applied stress"</div>
+                    <div>Journal of Nuclear Materials (2013) • <span class="citation-count">Citations: 44</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Honors & Awards -->
+        <div class="section">
+            <div class="section-title">Honors & Awards</div>
+            <div style="background-color: #f0f9ff; padding: 20px; border-radius: 8px; border-left: 4px solid #3b82f6;">
+                <ul class="achievements">
+                    <li><strong>Fellowship of Excellent Overseas Scholar Abroad</strong> - Chinese Government (2010)</li>
+                    <li><strong>Marie Curie Fellowship for Early-Stage Researchers</strong> - EU Commission (2010)</li>
+                    <li><strong>Erasmus Mundus Scholarship</strong> - EU Commission (2008)</li>
+                    <li><strong>British Government Overseas Student Award</strong> (2004)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Professional Network -->
+        <div class="section">
+            <div class="section-title">Professional Network</div>
+            <div style="background-color: #fefce8; padding: 20px; border-radius: 8px; border-left: 4px solid #eab308;">
+                <ul class="achievements">
+                    <li><strong>TOGAF Community:</strong> Active member providing mentorship to emerging enterprise architects</li>
+                    <li><strong>Cloud Architecture Forum (Tokyo):</strong> Founding member and regular speaker on enterprise data architecture</li>
+                    <li><strong>Data Governance Institute:</strong> Contributing author to best practices publications</li>
+                    <li><strong>Tokyo Data Engineering Meetup:</strong> Organizer and presenter for quarterly technology sessions</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
